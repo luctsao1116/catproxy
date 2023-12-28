@@ -1,6 +1,7 @@
 'use strict';
 import http from 'http';
 import https from 'https';
+import spdy from 'spdy';
 import extendMime from './extendMime';
 import defCfg from './config/defCfg';
 import configInit, * as config from './config/config';
@@ -296,7 +297,7 @@ class CatProxy {
 		} else if (opt.type === 'https' && !servers[0]) {
 			// 找到证书，创建https的服务器
 			let { privateKey: key, cert } = getCert(opt.certHost);
-			servers[0] = https.createServer({
+			servers[0] = spdy.createServer({
 				key,
 				cert,
 				rejectUnauthorized: false,

@@ -45,6 +45,7 @@
 		"read": "^1.0.7",
 		"request-ip": "^1.2.3",
 		"socket.io": "^1.4.8",
+		"spdy": "^4.0.2",
 		"weinre": "^2.0.0-pre-I0Z7U9OV",
 		"winston": "^2.2.0"
 	},
@@ -114,6 +115,9 @@
 		"node": ">=4.0.0"
 	},
 	"engineStrict": true,
+	"overrides": {
+		"graceful-fs": "^4.2.11"
+	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/jianxcao/catproxy"
