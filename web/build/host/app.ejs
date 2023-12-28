@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>catproxy</title>
+	</head>
+	<body>
+		<div id="g-wrap"></div>
+		<script>
+			window.config = <%-JSON.stringify(locals.uiOption)%>
+		</script>
+		<script src="<%=locals.uiOption.cdnBasePath%>/host/app.js"></script>
+	</body>
+</html>
